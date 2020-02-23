@@ -1,0 +1,26 @@
+<div class="p-grid">
+
+    <div class="p-col-2">ID</div>
+    <div class="p-col-10">
+         {{ oportunidade.id }}
+    </div>
+
+    <div class="p-col-2">Prospecto</div>
+    <div class="p-col-10">
+        {{ oportunidade.nomeProspecto }}
+    </div>
+
+    <div class="p-col-2">Descrição</div>
+    <div class="p-col-10">
+        {{ oportunidade.descricao }}
+    </div>
+
+    <div class="p-col-2">Valor</div>
+    <div class="p-col-10">
+        {{ oportunidade.valor }}
+    </div>
+
+    <div class="p-col-10 p-offset-2">
+        <button pButton type="submit" icon="pi pi-pencil" label="Editar" (click)="updateDialog(oportunidade)"></button>
+    </div>
+</div>
