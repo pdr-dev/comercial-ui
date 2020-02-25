@@ -28,8 +28,16 @@
     </ng-template>
 
 </p-table>
-<div class="p-col-1 p-offset-11">
-    <button pButton class="ui-button-info" icon="pi pi-plus" label="Adicionar" (click)="addDialog()"></button>
+
+<br>
+
+<div class="p-grid">
+    <div class="p-col-1 p-offset-10">
+         <button pButton class="ui-button-info" icon="pi pi-plus" label="Adicionar" (click)="addDialog()"></button>
+    </div>
+    <div class="p-col-1">
+        <button pButton class="ui-button-info" icon="pi pi-file-pdf" label="Exportar" (click)="exportReport()"></button>
+    </div>
 </div>
 
 <p-toast></p-toast>

@@ -15,6 +15,10 @@ export class OportunidadeService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
+  httpOptionsReport = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/force-download' })
+  }
+
   constructor(private httpClient: HttpClient) { }
 
   listar() {
@@ -36,6 +40,12 @@ export class OportunidadeService {
     const url = `${this.apiUrl}/${id}`;
 
     return this.httpClient.delete<Oportunidade>(url, this.httpOptions);
+  }
+
+  exportReport() {
+    const report = "report";
+    const all = "lista";
+    this.httpClient.get(`${this.apiUrl}/${report}/${all}`, this.httpOptionsReport);
   }
 
 }

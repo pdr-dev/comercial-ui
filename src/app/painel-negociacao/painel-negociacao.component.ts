@@ -64,4 +64,8 @@ export class PainelNegociacaoComponent implements OnInit {
     });
   }
 
+  exportReport(){
+    this.oportunidadeService.exportReport();
+  }
+
 }
